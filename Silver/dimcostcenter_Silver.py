@@ -17,7 +17,7 @@ Entity = "dimcostcenter"
 
 # COMMAND ----------
 
-costcenterDf= spark.table("bronze.CostCenter")
+costcenterDf= spark.table("bronze.costcenter")
 
 
 # COMMAND ----------
@@ -57,4 +57,5 @@ df_final = dimcostcenterDf
 saveDeltaTableToCatalog(df_final,"silver",Entity)
 
 # COMMAND ----------
+
 

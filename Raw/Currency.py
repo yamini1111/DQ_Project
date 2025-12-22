@@ -33,6 +33,3 @@ display(currencydf)
 # COMMAND ----------
 
 writeRawToDeltaLake(currencydf,deltaLakePath)
-
-# COMMAND ----------
-

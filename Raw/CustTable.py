@@ -33,6 +33,3 @@ display(custtabledf)
 # COMMAND ----------
 
 writeRawToDeltaLake(custtabledf,deltaLakePath)
-
-# COMMAND ----------
-

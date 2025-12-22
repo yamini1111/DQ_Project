@@ -30,7 +30,8 @@ display(partyAddressdf)
 
 # COMMAND ----------
 
-saveDeltaTableToCatalog(partyAddressdf,"Bronze",Entity)
+saveDeltaTableToCatalog(partyAddressdf,"bronze",Entity)
 
 # COMMAND ----------
+
 

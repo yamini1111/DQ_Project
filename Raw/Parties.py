@@ -33,6 +33,3 @@ display(partiesdf)
 # COMMAND ----------
 
 writeRawToDeltaLake(partiesdf,deltaLakePath)
-
-# COMMAND ----------
-

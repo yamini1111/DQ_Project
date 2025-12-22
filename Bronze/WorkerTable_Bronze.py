@@ -12,7 +12,7 @@
 # COMMAND ----------
 
 Entity = "WorkerTable"
-EntityPath = f"Hr/{Entity}/"
+EntityPath = f"HR/{Entity}/"
 
 # COMMAND ----------
 
@@ -33,4 +33,5 @@ display(partyAddressdf)
 saveDeltaTableToCatalog(partyAddressdf,"Bronze",Entity)
 
 # COMMAND ----------
+
 

@@ -13,7 +13,7 @@
 # COMMAND ----------
 
 entityName = "WorkerTable"
-manifest = "Hr"
+manifest = "HR"
 deltaLakePath = "DeltaLake/Raw/HR/" + entityName
 
 # COMMAND ----------
@@ -35,4 +35,5 @@ display(partiesdf)
 writeRawToDeltaLake(partiesdf,deltaLakePath)
 
 # COMMAND ----------
+
 

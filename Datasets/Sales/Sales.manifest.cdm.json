@@ -1,0 +1,150 @@
+{
+  "manifestName": "Purchase",
+  "entities": [
+    {	
+      "type": "LocalEntity",		
+      "entityName": "CustTable",
+      "entityPath": "CustTable.cdm.json/CustTable",
+      "dataPartitionPatterns": [
+        {
+          "name": "CustTable-data-description",
+          "rootLocation": "CustTable",
+          "globPattern": "/*.csv",
+          "regularExpression": "",
+          "exhibitsTraits": [
+            {
+              "traitReference": "is.partition.format.CSV",
+              "arguments": [
+                {
+                  "name": "columnHeaders",
+                  "value": "false"
+                },
+                {
+                  "name": "delimiter",
+                  "value": ","
+                },
+                {
+                  "name": "escape",
+                  "value": "\""
+                },
+                {
+                  "name": "newline",
+                  "value": "\r\n"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "PaymentTypes",
+      "entityPath": "PaymentTypes.cdm.json/PaymentTypes",
+      "dataPartitionPatterns": [
+        {
+          "name": "PaymentTypes-data-description",
+          "rootLocation": "PaymentTypes",
+          "globPattern": "/*.csv",
+          "regularExpression": "",
+          "exhibitsTraits": [
+            {
+              "traitReference": "is.partition.format.CSV",
+              "arguments": [
+                {
+                  "name": "columnHeaders",
+                  "value": "false"
+                },
+                {
+                  "name": "delimiter",
+                  "value": ","
+                },
+                {
+                  "name": "escape",
+                  "value": "\""
+                },
+                {
+                  "name": "newline",
+                  "value": "\r\n"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "PromoTable",
+      "entityPath": "PromoTable.cdm.json/PromoTable",
+      "dataPartitionPatterns": [
+        {
+          "name": "PromoTable-data-description",
+          "rootLocation": "PromoTable",
+          "globPattern": "/*.csv",
+          "regularExpression": "",
+          "exhibitsTraits": [
+            {
+              "traitReference": "is.partition.format.CSV",
+              "arguments": [
+                {
+                  "name": "columnHeaders",
+                  "value": "false"
+                },
+                {
+                  "name": "delimiter",
+                  "value": ","
+                },
+                {
+                  "name": "escape",
+                  "value": "\""
+                },
+                {
+                  "name": "newline",
+                  "value": "\r\n"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "SalesOrderLine",
+      "entityPath": "SalesOrderLine.cdm.json/SalesOrderLine",
+      "dataPartitionPatterns": [
+        {
+          "name": "SalesOrderLine-data-description",
+          "rootLocation": "SalesOrderLine",
+          "globPattern": "/*.csv",
+          "regularExpression": "",
+          "exhibitsTraits": [
+            {
+              "traitReference": "is.partition.format.CSV",
+              "arguments": [
+                {
+                  "name": "columnHeaders",
+                  "value": "false"
+                },
+                {
+                  "name": "delimiter",
+                  "value": ","
+                },
+                {
+                  "name": "escape",
+                  "value": "\""
+                },
+                {
+                  "name": "newline",
+                  "value": "\r\n"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "jsonSchemaSemanticVersion": "1.1.0"
+}

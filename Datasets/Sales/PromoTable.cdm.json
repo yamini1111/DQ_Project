@@ -1,0 +1,77 @@
+{
+    "jsonSchemaSemanticVersion": "1.1.0",
+    "imports": [
+        {
+            "corpusPath": "cdm:/foundations.cdm.json"
+        },
+        {
+            "corpusPath": "localCdm:/foundations.cdm.json"
+        }
+    ],
+    "definitions": [
+        {
+            "entityName": "PromoTable",
+            "exhibitsTraits": [
+                {
+                    "traitReference": "is.CDM.entityVersion",
+                    "arguments": [
+                        {
+                            "name": "versionNumber",
+                            "value": "1.0.0"
+                        }
+                    ]
+                }
+            ],
+            "hasAttributes": [
+                {
+                    "name": "PromotionId",
+                    "dataFormat": "Int64",
+                    "description": "The unique PromotionId."
+                },
+                {
+                    "name": "LastProcessedChange_DateTime",
+                    "dataFormat": "DateTime",
+                    "description": "The DateTime timestamp for the last CDC change on this record."
+                },
+                {
+                    "name": "DataLakeModified_DateTime",
+                    "dataFormat": "DateTime",
+                    "description": "The DateTime timestamp for the last modification on the Lake (write) for this record."
+                },
+                {
+                    "name": "PromotionName",
+                    "dataFormat": "String",
+                    "description": "PromotionName"
+                },
+                {
+                    "name": "PromoCode",
+                    "dataFormat": "Int64"
+                },
+		{
+                    "name": "PromoType",
+                    "dataFormat": "String"
+                },
+                {
+                    "name": "PromoPercentage",
+                    "dataFormat": "Decimal"
+                },
+                {
+                    "name": "ValidFrom",
+                    "dataFormat": "DateTime"
+                },
+                {
+                    "name": "ValidTo",
+                    "dataFormat": "DateTime"
+                },
+                {
+                    "name": "IsActive",
+                    "dataFormat": "Int64"
+                },
+                {
+                    "name": "RecordId",
+                    "dataFormat": "Int64"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,99 @@
+{
+    "jsonSchemaSemanticVersion": "1.1.0",
+    "imports": [
+        {
+            "corpusPath": "cdm:/foundations.cdm.json"
+        },
+        {
+            "corpusPath": "localCdm:/foundations.cdm.json"
+        }
+    ],
+    "definitions": [
+        {
+            "entityName": "SalesOrderLine",
+            "exhibitsTraits": [
+                {
+                    "traitReference": "is.CDM.entityVersion",
+                    "arguments": [
+                        {
+                            "name": "versionNumber",
+                            "value": "1.0.0"
+                        }
+                    ]
+                }
+            ],
+            "hasAttributes": [
+                {
+                    "name": "SalesOrderNumber",
+                    "dataFormat": "Int64",
+                    "description": "The unique SalesOrderNumber."
+                },
+                {
+                    "name": "LastProcessedChange_DateTime",
+                    "dataFormat": "DateTime",
+                    "description": "The DateTime timestamp for the last CDC change on this record."
+                },
+                {
+                    "name": "DataLakeModified_DateTime",
+                    "dataFormat": "DateTime",
+                    "description": "The DateTime timestamp for the last modification on the Lake (write) for this record."
+                },
+				{
+                    "name": "SalesOrderLine",
+                    "dataFormat": "Int64",
+                    "description": "The SalesOrderLine."
+                },
+                {
+                    "name": "ItemId",
+                    "dataFormat": "Int64"
+                },
+				{
+                    "name": "Qty",
+                    "dataFormat": "Int64"
+                },
+                {
+                    "name": "Price",
+                    "dataFormat": "Decimal"
+                },
+                {
+                    "name": "VatPercentage",
+                    "dataFormat": "Decimal"
+                },
+                {
+                    "name": "CurrencyCode",
+                    "dataFormat": "String"
+                },
+                {
+                    "name": "BookDate",
+                    "dataFormat": "DateTime"
+                },
+                {
+                    "name": "ShippedDate",
+                    "dataFormat": "DateTime"
+                },
+                {
+                    "name": "DeliveredDate",
+                    "dataFormat": "DateTime"
+                },
+                {
+                    "name": "TrackingNumber",
+                    "dataFormat": "Int64"
+                },
+                {
+                    "name": "CustId",
+                    "dataFormat": "Int64"
+                },
+                {
+                    "name": "PaymentTypeDesc",
+                    "dataFormat": "String"
+                },
+                {
+                    "name": "RecordId",
+                    "dataFormat": "Int64"
+                }
+
+
+            ]
+        }
+    ]
+}

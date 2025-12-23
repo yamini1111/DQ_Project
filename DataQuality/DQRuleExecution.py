@@ -1,10 +1,14 @@
 # Databricks notebook source
+# MAGIC %run ./Utilities
+
+# COMMAND ----------
+
 # MAGIC %run ./DQChecks
 # MAGIC
 
 # COMMAND ----------
 
-# MAGIC %run ./Utilities
+catalog_name = "ucdqdev"
 
 # COMMAND ----------
 
@@ -26,7 +30,7 @@ for row in df_rules.collect():
     
     
     match rulename:
-        case "PrimaryKey":
+        case "PrimaryKeyCheck":
             executePrimaryKeyCheck( object_name,sourcelayer,rulename,sourceattribute,query)
         case "NullCheck":
             executeNullCheck( object_name,sourcelayer,rulename,sourceattribute,query)
@@ -57,7 +61,7 @@ df_dq_results = (spark.read.format("csv")
     .option("header", "True")
     .schema(schema)
     .option("recursiveFileLookup", "true")
-    .option("path", "/Volumes/90111adbdev/dataquality/dqcheckresults/").load())
+    .option("path", f"/Volumes/{catalog_name}/dataquality/dqcheckresults/").load())
 df_dq_results_final = df_dq_results.filter(f"rundatetime > '{watermarkvalue}'")
 display(df_dq_results_final)
 

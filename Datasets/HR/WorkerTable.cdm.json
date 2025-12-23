@@ -1,0 +1,95 @@
+{
+    "jsonSchemaSemanticVersion": "1.1.0",
+    "imports": [
+        {
+            "corpusPath": "cdm:/foundations.cdm.json"
+        },
+        {
+            "corpusPath": "localCdm:/foundations.cdm.json"
+        }
+    ],
+    "definitions": [
+        {
+            "entityName": "WorkerTable",
+            "exhibitsTraits": [
+                {
+                    "traitReference": "is.CDM.entityVersion",
+                    "arguments": [
+                        {
+                            "name": "versionNumber",
+                            "value": "1.0.0"
+                        }
+                    ]
+                }
+            ],
+            "hasAttributes": [
+                {
+                    "name": "WorkerID",
+                    "dataFormat": "Int64",
+                    "description": "The worker id."
+                },
+                {
+                    "name": "LastProcessedChange_DateTime",
+                    "dataFormat": "DateTime",
+                    "description": "The DateTime timestamp for the last CDC change on this record."
+                },
+                {
+                    "name": "DataLakeModified_DateTime",
+                    "dataFormat": "DateTime",
+                    "description": "The DateTime timestamp for the last modification on the Lake (write) for this record."
+                },
+                {
+                    "name": "SupervisorId",
+                    "dataFormat": "Int64",
+                    "description": "The SupervisorId."
+                },
+                {
+                    "name": "WorkerName",
+                    "dataFormat": "String",
+                    "description": "The WorkerName"
+                },
+                {
+                    "name": "WorkerEmail",
+                    "dataFormat": "String",
+                    "description": "The WorkerEmail"
+                },
+                {
+                    "name": "Phone",
+                    "dataFormat": "String",
+                    "description": "The Phone no"
+                },
+                {
+                    "name": "DOJ",
+                    "dataFormat": "DateTime"
+                },
+                {
+                    "name": "DOL",
+                    "dataFormat": "DateTime"
+                },
+                {
+                    "name": "Vertical",
+                    "dataFormat": "String",
+                    "description": "The Vertical"
+                },
+                {
+                    "name": "Type",
+                    "dataFormat": "String",
+                    "description": "The worker Type"
+                },
+                {
+                    "name": "PayPerAnnum",
+                    "dataFormat": "Decimal"
+                },
+                {
+                    "name": "Rate",
+                    "dataFormat": "Decimal"
+                },	
+                {
+                    "name": "RecordId",
+                    "dataFormat": "Int64"
+                }
+
+            ]
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+  "manifestName": "Hr",
+  "entities": [
+    {	
+      "type": "LocalEntity",		
+      "entityName": "WorkerTable",
+      "entityPath": "WorkerTable.cdm.json/WorkerTable",
+      "dataPartitionPatterns": [
+        {
+          "name": "WorkerTable-data-description",
+          "rootLocation": "WorkerTable",
+          "globPattern": "/*.csv",
+          "regularExpression": "",
+          "exhibitsTraits": [
+            {
+              "traitReference": "is.partition.format.CSV",
+              "arguments": [
+                {
+                  "name": "columnHeaders",
+                  "value": "false"
+                },
+                {
+                  "name": "delimiter",
+                  "value": ","
+                },
+                {
+                  "name": "escape",
+                  "value": "\""
+                },
+                {
+                  "name": "newline",
+                  "value": "\r\n"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+
+  ],
+  "jsonSchemaSemanticVersion": "1.1.0"
+}

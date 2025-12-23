@@ -1,0 +1,85 @@
+{
+    "jsonSchemaSemanticVersion": "1.1.0",
+    "imports": [
+        {
+            "corpusPath": "cdm:/foundations.cdm.json"
+        },
+        {
+            "corpusPath": "localCdm:/foundations.cdm.json"
+        }
+    ],
+    "definitions": [
+        {
+            "entityName": "FiscalPeriod",
+            "exhibitsTraits": [
+                {
+                    "traitReference": "is.CDM.entityVersion",
+                    "arguments": [
+                        {
+                            "name": "versionNumber",
+                            "value": "1.0.0"
+                        }
+                    ]
+                }
+            ],
+            "hasAttributes": [
+                {
+                    "name": "FiscalPeriodName",
+                    "dataFormat": "String",
+                    "description": "The Fiscalperiodname."
+                },
+                {
+                    "name": "LastProcessedChange_DateTime",
+                    "dataFormat": "DateTime",
+                    "description": "The DateTime timestamp for the last CDC change on this record."
+                },
+                {
+                    "name": "DataLakeModified_DateTime",
+                    "dataFormat": "DateTime",
+                    "description": "The DateTime timestamp for the last modification on the Lake (write) for this record."
+                },
+                {
+                    "name": "FiscalStartDate",
+                    "dataFormat": "DateTime"
+                },
+                {
+                    "name": "FiscalEndDate",
+                    "dataFormat": "DateTime"
+                },
+                {
+                    "name": "FiscalMonth",
+                    "dataFormat": "Int64"
+                },
+                {
+                    "name": "FiscalYearStart",
+                    "dataFormat": "DateTime"
+                },
+                {
+                    "name": "FiscalYearEnd",
+                    "dataFormat": "DateTime"
+                },
+                {
+                    "name": "FiscalQuarter",
+                    "dataFormat": "Int64"
+                },
+                {
+                    "name": "FiscalQuarterStart",
+                    "dataFormat": "DateTime"
+                },
+                {
+                    "name": "FiscalQuarterEnd",
+                    "dataFormat": "DateTime"
+                },
+                {
+                    "name": "FiscalYear",
+                    "dataFormat": "Int64"
+                },
+                {
+                    "name": "RecordId",
+                    "dataFormat": "Int64"
+                }
+
+            ]
+        }
+    ]
+}

@@ -1,0 +1,115 @@
+{
+  "manifestName": "Others",
+  "entities": [
+    {	
+      "type": "LocalEntity",		
+      "entityName": "Currency",
+      "entityPath": "Currency.cdm.json/Currency",
+      "dataPartitionPatterns": [
+        {
+          "name": "Currency-data-description",
+          "rootLocation": "Currency",
+          "globPattern": "/*.csv",
+          "regularExpression": "",
+          "exhibitsTraits": [
+            {
+              "traitReference": "is.partition.format.CSV",
+              "arguments": [
+                {
+                  "name": "columnHeaders",
+                  "value": "false"
+                },
+                {
+                  "name": "delimiter",
+                  "value": ","
+                },
+                {
+                  "name": "escape",
+                  "value": "\""
+                },
+                {
+                  "name": "newline",
+                  "value": "\r\n"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+{	
+      "type": "LocalEntity",		
+      "entityName": "FiscalPeriod",
+      "entityPath": "FiscalPeriod.cdm.json/FiscalPeriod",
+      "dataPartitionPatterns": [
+        {
+          "name": "FiscalPeriod-data-description",
+          "rootLocation": "FiscalPeriod",
+          "globPattern": "/*.csv",
+          "regularExpression": "",
+          "exhibitsTraits": [
+            {
+              "traitReference": "is.partition.format.CSV",
+              "arguments": [
+                {
+                  "name": "columnHeaders",
+                  "value": "false"
+                },
+                {
+                  "name": "delimiter",
+                  "value": ","
+                },
+                {
+                  "name": "escape",
+                  "value": "\""
+                },
+                {
+                  "name": "newline",
+                  "value": "\r\n"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+{	
+      "type": "LocalEntity",		
+      "entityName": "CostCenter",
+      "entityPath": "CostCenter.cdm.json/CostCenter",
+      "dataPartitionPatterns": [
+        {
+          "name": "CostCenter-data-description",
+          "rootLocation": "CostCenter",
+          "globPattern": "/*.csv",
+          "regularExpression": "",
+          "exhibitsTraits": [
+            {
+              "traitReference": "is.partition.format.CSV",
+              "arguments": [
+                {
+                  "name": "columnHeaders",
+                  "value": "false"
+                },
+                {
+                  "name": "delimiter",
+                  "value": ","
+                },
+                {
+                  "name": "escape",
+                  "value": "\""
+                },
+                {
+                  "name": "newline",
+                  "value": "\r\n"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+
+  ],
+  "jsonSchemaSemanticVersion": "1.1.0"
+}

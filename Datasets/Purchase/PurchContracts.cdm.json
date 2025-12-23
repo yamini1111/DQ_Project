@@ -1,0 +1,69 @@
+{
+    "jsonSchemaSemanticVersion": "1.1.0",
+    "imports": [
+        {
+            "corpusPath": "cdm:/foundations.cdm.json"
+        },
+        {
+            "corpusPath": "localCdm:/foundations.cdm.json"
+        }
+    ],
+    "definitions": [
+        {
+            "entityName": "PurchContracts",
+            "exhibitsTraits": [
+                {
+                    "traitReference": "is.CDM.entityVersion",
+                    "arguments": [
+                        {
+                            "name": "versionNumber",
+                            "value": "1.0.0"
+                        }
+                    ]
+                }
+            ],
+            "hasAttributes": [
+                {
+                    "name": "ContractId",
+                    "dataFormat": "Int64",
+                    "description": "The unique id of contract."
+                },
+                {
+                    "name": "LastProcessedChange_DateTime",
+                    "dataFormat": "DateTime",
+                    "description": "The DateTime timestamp for the last CDC change on this record."
+                },
+                {
+                    "name": "DataLakeModified_DateTime",
+                    "dataFormat": "DateTime",
+                    "description": "The DateTime timestamp for the last modification on the Lake (write) for this record."
+                },
+                {
+                    "name": "FirstParty",
+                    "dataFormat": "String",
+                    "description": "Name of FirstParty"
+                },
+                {
+                    "name": "SecondParty",
+                    "dataFormat": "String"
+                },
+                {
+                    "name": "ValidFrom",
+                    "dataFormat": "DateTime"
+                },
+                {
+                    "name": "ValidTo",
+                    "dataFormat": "DateTime"
+                },
+                {
+                    "name": "IsActive",
+                    "dataFormat": "Int64"
+                },
+                {
+                    "name": "RecordId",
+                    "dataFormat": "Int64"
+                }
+            ]
+        }
+    ]
+}

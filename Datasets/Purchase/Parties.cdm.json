@@ -1,0 +1,73 @@
+{
+    "jsonSchemaSemanticVersion": "1.1.0",
+    "imports": [
+        {
+            "corpusPath": "cdm:/foundations.cdm.json"
+        },
+        {
+            "corpusPath": "localCdm:/foundations.cdm.json"
+        }
+    ],
+    "definitions": [
+        {
+            "entityName": "Parties",
+            "exhibitsTraits": [
+                {
+                    "traitReference": "is.CDM.entityVersion",
+                    "arguments": [
+                        {
+                            "name": "versionNumber",
+                            "value": "1.0.0"
+                        }
+                    ]
+                }
+            ],
+            "hasAttributes": [
+                {
+                    "name": "PartyId",
+                    "dataFormat": "Int64",
+                    "description": "The unique PartyId of entity."
+                },
+                {
+                    "name": "PartyName",
+                    "dataFormat": "String",
+                    "description": "PartyName for party"
+                },
+                {
+                    "name": "LastProcessedChange_DateTime",
+                    "dataFormat": "DateTime",
+                    "description": "The DateTime timestamp for the last CDC change on this record."
+                },
+                {
+                    "name": "DataLakeModified_DateTime",
+                    "dataFormat": "DateTime",
+                    "description": "The DateTime timestamp for the last modification on the Lake (write) for this record."
+                },
+                {
+                    "name": "PartyAddressCode",
+                    "dataFormat": "Int64"
+                },
+                {
+                    "name": "EstablishedDate",
+                    "dataFormat": "DateTime"
+                },
+                {
+                    "name": "PartyEmailId",
+                    "dataFormat": "String"
+                },
+                {
+                    "name": "PartyContactNumber",
+                    "dataFormat": "String"
+                },
+                {
+                    "name": "RecordId",
+                    "dataFormat": "Int64"
+                },
+                {
+                    "name": "TaxId",
+                    "dataFormat": "String"
+                }
+            ]
+        }
+    ]
+}

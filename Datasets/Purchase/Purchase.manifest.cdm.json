@@ -1,0 +1,258 @@
+{
+  "manifestName": "Purchase",
+  "entities": [
+    {	
+      "type": "LocalEntity",		
+      "entityName": "Parties",
+      "entityPath": "Parties.cdm.json/Parties",
+      "dataPartitionPatterns": [
+        {
+          "name": "Parties-data-description",
+          "rootLocation": "Parties",
+          "globPattern": "/*.csv",
+          "regularExpression": "",
+          "exhibitsTraits": [
+            {
+              "traitReference": "is.partition.format.CSV",
+              "arguments": [
+                {
+                  "name": "columnHeaders",
+                  "value": "false"
+                },
+                {
+                  "name": "delimiter",
+                  "value": ","
+                },
+                {
+                  "name": "escape",
+                  "value": "\""
+                },
+                {
+                  "name": "newline",
+                  "value": "\r\n"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "PartyAddress",
+      "entityPath": "PartyAddress.cdm.json/PartyAddress",
+      "dataPartitionPatterns": [
+        {
+          "name": "PartyAddress-data-description",
+          "rootLocation": "PartyAddress",
+          "globPattern": "/*.csv",
+          "regularExpression": "",
+          "exhibitsTraits": [
+            {
+              "traitReference": "is.partition.format.CSV",
+              "arguments": [
+                {
+                  "name": "columnHeaders",
+                  "value": "false"
+                },
+                {
+                  "name": "delimiter",
+                  "value": ","
+                },
+                {
+                  "name": "escape",
+                  "value": "\""
+                },
+                {
+                  "name": "newline",
+                  "value": "\r\n"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "VendTable",
+      "entityPath": "VendTable.cdm.json/VendTable",
+      "dataPartitionPatterns": [
+        {
+          "name": "VendTable-data-description",
+          "rootLocation": "VendTable",
+          "globPattern": "/*.csv",
+          "regularExpression": "",
+          "exhibitsTraits": [
+            {
+              "traitReference": "is.partition.format.CSV",
+              "arguments": [
+                {
+                  "name": "columnHeaders",
+                  "value": "false"
+                },
+                {
+                  "name": "delimiter",
+                  "value": ","
+                },
+                {
+                  "name": "escape",
+                  "value": "\""
+                },
+                {
+                  "name": "newline",
+                  "value": "\r\n"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "PurchContracts",
+      "entityPath": "PurchContracts.cdm.json/PurchContracts",
+      "dataPartitionPatterns": [
+        {
+          "name": "PurchContracts-data-description",
+          "rootLocation": "PurchContracts",
+          "globPattern": "/*.csv",
+          "regularExpression": "",
+          "exhibitsTraits": [
+            {
+              "traitReference": "is.partition.format.CSV",
+              "arguments": [
+                {
+                  "name": "columnHeaders",
+                  "value": "false"
+                },
+                {
+                  "name": "delimiter",
+                  "value": ","
+                },
+                {
+                  "name": "escape",
+                  "value": "\""
+                },
+                {
+                  "name": "newline",
+                  "value": "\r\n"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "PurchaseOrder",
+      "entityPath": "PurchaseOrder.cdm.json/PurchaseOrder",
+      "dataPartitionPatterns": [
+        {
+          "name": "PurchaseOrder-data-description",
+          "rootLocation": "PurchaseOrder",
+          "globPattern": "/*.csv",
+          "regularExpression": "",
+          "exhibitsTraits": [
+            {
+              "traitReference": "is.partition.format.CSV",
+              "arguments": [
+                {
+                  "name": "columnHeaders",
+                  "value": "false"
+                },
+                {
+                  "name": "delimiter",
+                  "value": ","
+                },
+                {
+                  "name": "escape",
+                  "value": "\""
+                },
+                {
+                  "name": "newline",
+                  "value": "\r\n"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "PurchItem",
+      "entityPath": "PurchItem.cdm.json/PurchItem",
+      "dataPartitionPatterns": [
+        {
+          "name": "PurchItem-data-description",
+          "rootLocation": "PurchItem",
+          "globPattern": "/*.csv",
+          "regularExpression": "",
+          "exhibitsTraits": [
+            {
+              "traitReference": "is.partition.format.CSV",
+              "arguments": [
+                {
+                  "name": "columnHeaders",
+                  "value": "false"
+                },
+                {
+                  "name": "delimiter",
+                  "value": ","
+                },
+                {
+                  "name": "escape",
+                  "value": "\""
+                },
+                {
+                  "name": "newline",
+                  "value": "\r\n"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "PurchCategory",
+      "entityPath": "PurchCategory.cdm.json/PurchCategory",
+      "dataPartitionPatterns": [
+        {
+          "name": "PurchCategory-data-description",
+          "rootLocation": "PurchCategory",
+          "globPattern": "/*.csv",
+          "regularExpression": "",
+          "exhibitsTraits": [
+            {
+              "traitReference": "is.partition.format.CSV",
+              "arguments": [
+                {
+                  "name": "columnHeaders",
+                  "value": "false"
+                },
+                {
+                  "name": "delimiter",
+                  "value": ","
+                },
+                {
+                  "name": "escape",
+                  "value": "\""
+                },
+                {
+                  "name": "newline",
+                  "value": "\r\n"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "jsonSchemaSemanticVersion": "1.1.0"
+}

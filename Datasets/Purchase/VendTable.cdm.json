@@ -1,0 +1,99 @@
+{
+    "jsonSchemaSemanticVersion": "1.1.0",
+    "imports": [
+        {
+            "corpusPath": "cdm:/foundations.cdm.json"
+        },
+        {
+            "corpusPath": "localCdm:/foundations.cdm.json"
+        }
+    ],
+    "definitions": [
+        {
+            "entityName": "VendTable",
+            "exhibitsTraits": [
+                {
+                    "traitReference": "is.CDM.entityVersion",
+                    "arguments": [
+                        {
+                            "name": "versionNumber",
+                            "value": "1.0.0"
+                        }
+                    ]
+                }
+            ],
+            "hasAttributes": [
+                {
+                    "name": "VendId",
+                    "dataFormat": "Int64",
+                    "description": "The unique id of vendor."
+                },
+                {
+                    "name": "VendorName",
+                    "dataFormat": "String",
+                    "description": "Name of vendor"
+                },
+                {
+                    "name": "LastProcessedChange_DateTime",
+                    "dataFormat": "DateTime",
+                    "description": "The DateTime timestamp for the last CDC change on this record."
+                },
+                {
+                    "name": "DataLakeModified_DateTime",
+                    "dataFormat": "DateTime",
+                    "description": "The DateTime timestamp for the last modification on the Lake (write) for this record."
+                },
+                {
+                    "name": "Address",
+                    "dataFormat": "String"
+                },
+                {
+                    "name": "City",
+                    "dataFormat": "String"
+                },
+                {
+                    "name": "State",
+                    "dataFormat": "String"
+                },
+                {
+                    "name": "Country",
+                    "dataFormat": "String"
+                },
+                {
+                    "name": "ZipCode",
+                    "dataFormat": "String"
+                },
+                {
+                    "name": "Region",
+                    "dataFormat": "String"
+                },
+                {
+                    "name": "ValidFrom",
+                    "dataFormat": "DateTime"
+                },
+                {
+                    "name": "ValidTo",
+                    "dataFormat": "DateTime"
+                },
+                {
+                    "name": "Active",
+                    "dataFormat": "Int64"
+                },
+                {
+                    "name": "RecordId",
+                    "dataFormat": "Int64"
+                },
+                {
+                    "name": "TaxId",
+                    "dataFormat": "String"
+                },
+                {
+                    "name": "CurrencyCode",
+                    "dataFormat": "String"
+                }
+
+
+            ]
+        }
+    ]
+}

@@ -1,0 +1,114 @@
+{
+    "jsonSchemaSemanticVersion": "1.1.0",
+    "imports": [
+        {
+            "corpusPath": "cdm:/foundations.cdm.json"
+        },
+        {
+            "corpusPath": "localCdm:/foundations.cdm.json"
+        }
+    ],
+    "definitions": [
+        {
+            "entityName": "PurchaseOrder",
+            "exhibitsTraits": [
+                {
+                    "traitReference": "is.CDM.entityVersion",
+                    "arguments": [
+                        {
+                            "name": "versionNumber",
+                            "value": "1.0.0"
+                        }
+                    ]
+                }
+            ],
+            "hasAttributes": [
+                {
+                    "name": "PoNumber",
+                    "dataFormat": "String",
+                    "description": "The unique id of CategoryId."
+                },
+		{
+                    "name": "LineItem",
+                    "dataFormat": "Int64"
+                },
+		{
+                    "name": "VendId",
+                    "dataFormat": "Int64",
+                    "description": "The VendorId"
+                },
+                {
+                    "name": "LastProcessedChange_DateTime",
+                    "dataFormat": "DateTime",
+                    "description": "The DateTime timestamp for the last CDC change on this record."
+                },
+                {
+                    "name": "DataLakeModified_DateTime",
+                    "dataFormat": "DateTime",
+                    "description": "The DateTime timestamp for the last modification on the Lake (write) for this record."
+                },
+                {
+                    "name": "Qty",
+                    "dataFormat": "Int64"
+                },
+                {
+                    "name": "PurchasePrice",
+                    "dataFormat": "String"
+                },
+                {
+                    "name": "TotalOrder",
+                    "dataFormat": "String"
+                },
+                {
+                    "name": "ExchangeRate",
+                    "dataFormat": "String"
+                },
+                {
+                    "name": "CostCenter",
+                    "dataFormat": "String"
+                },
+                {
+                    "name": "Itemkey",
+                    "dataFormat": "String"
+                },
+                {
+                    "name": "currencycode",
+                    "dataFormat": "String"
+                },
+                {
+                    "name": "OrderDate",
+                    "dataFormat": "DateTime"
+                },
+                {
+                    "name": "ShipDate",
+                    "dataFormat": "DateTime"
+                },
+                {
+                    "name": "DeliveredDate",
+                    "dataFormat": "DateTime"
+                },
+                {
+                    "name": "TrackingNumber",
+                    "dataFormat": "String"
+                },
+                {
+                    "name": "Batchid",
+                    "dataFormat": "String"
+                },
+                {
+                    "name": "CreatedBy",
+                    "dataFormat": "String"
+                },
+                {
+                    "name": "RecordId",
+                    "dataFormat": "Int64"
+                },
+                {
+                    "name": "CategoryId",
+                    "dataFormat": "Int64"
+                }
+
+            ]
+        }
+    ]
+}

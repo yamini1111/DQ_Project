@@ -1,0 +1,81 @@
+{
+    "jsonSchemaSemanticVersion": "1.1.0",
+    "imports": [
+        {
+            "corpusPath": "cdm:/foundations.cdm.json"
+        },
+        {
+            "corpusPath": "localCdm:/foundations.cdm.json"
+        }
+    ],
+    "definitions": [
+        {
+            "entityName": "PartyAddress",
+            "exhibitsTraits": [
+                {
+                    "traitReference": "is.CDM.entityVersion",
+                    "arguments": [
+                        {
+                            "name": "versionNumber",
+                            "value": "1.0.0"
+                        }
+                    ]
+                }
+            ],
+            "hasAttributes": [
+                {
+                    "name": "PartyNumber",
+                    "dataFormat": "Int64",
+                    "description": "The unique PartyNumber of entity."
+                },
+                {
+                    "name": "LastProcessedChange_DateTime",
+                    "dataFormat": "DateTime",
+                    "description": "The DateTime timestamp for the last CDC change on this record."
+                },
+                {
+                    "name": "DataLakeModified_DateTime",
+                    "dataFormat": "DateTime",
+                    "description": "The DateTime timestamp for the last modification on the Lake (write) for this record."
+                },
+                {
+                    "name": "Address",
+                    "dataFormat": "String",
+                    "description": "Address for party"
+                },
+                {
+                    "name": "City",
+                    "dataFormat": "String"
+                },
+                {
+                    "name": "State",
+                    "dataFormat": "String"
+                },
+                {
+                    "name": "Country",
+                    "dataFormat": "String"
+                },
+                {
+                    "name": "ZipCode",
+                    "dataFormat": "String"
+                },
+                {
+                    "name": "Region",
+                    "dataFormat": "String"
+                },
+                {
+                    "name": "ValidFrom",
+                    "dataFormat": "DateTime"
+                },
+                {
+                    "name": "ValidTo",
+                    "dataFormat": "DateTime"
+                },
+                {
+                    "name": "RecordId",
+                    "dataFormat": "Int64"
+                }
+            ]
+        }
+    ]
+}

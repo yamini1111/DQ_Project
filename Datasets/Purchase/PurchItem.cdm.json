@@ -1,0 +1,69 @@
+{
+    "jsonSchemaSemanticVersion": "1.1.0",
+    "imports": [
+        {
+            "corpusPath": "cdm:/foundations.cdm.json"
+        },
+        {
+            "corpusPath": "localCdm:/foundations.cdm.json"
+        }
+    ],
+    "definitions": [
+        {
+            "entityName": "PurchItem",
+            "exhibitsTraits": [
+                {
+                    "traitReference": "is.CDM.entityVersion",
+                    "arguments": [
+                        {
+                            "name": "versionNumber",
+                            "value": "1.0.0"
+                        }
+                    ]
+                }
+            ],
+            "hasAttributes": [
+                {
+                    "name": "ItemId",
+                    "dataFormat": "Int64",
+                    "description": "The unique id of ItemId."
+                },
+                {
+                    "name": "Txt",
+                    "dataFormat": "String",
+                    "description": "Name of item"
+                },
+                {
+                    "name": "LastProcessedChange_DateTime",
+                    "dataFormat": "DateTime",
+                    "description": "The DateTime timestamp for the last CDC change on this record."
+                },
+                {
+                    "name": "DataLakeModified_DateTime",
+                    "dataFormat": "DateTime",
+                    "description": "The DateTime timestamp for the last modification on the Lake (write) for this record."
+                },
+                {
+                    "name": "ValidFrom",
+                    "dataFormat": "DateTime"
+                },
+                {
+                    "name": "ValidTo",
+                    "dataFormat": "DateTime"
+                },
+                {
+                    "name": "Price",
+                    "dataFormat": "Decimal"
+                },
+                {
+                    "name": "RecordId",
+                    "dataFormat": "Int64"
+                },
+                {
+                    "name": "CategoryID",
+                    "dataFormat": "Int64"
+                }
+            ]
+        }
+    ]
+}

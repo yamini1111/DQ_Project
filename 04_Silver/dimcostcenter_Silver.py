@@ -3,7 +3,7 @@
 
 # COMMAND ----------
 
-# MAGIC %run ../Misc/SharedLibraries
+# MAGIC %run ../01_Misc/01_SharedLibraries
 
 # COMMAND ----------
 
@@ -55,3 +55,7 @@ df_final = dimcostcenterDf
 # COMMAND ----------
 
 saveDeltaTableToCatalog(df_final,"silver",Entity)
+
+# COMMAND ----------
+
+saveUCsilverTableToDQ('silver','Others','CostCenter',Entity)

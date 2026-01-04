@@ -4,16 +4,31 @@
 # COMMAND ----------
 
 # MAGIC %run ./02_DQChecks
-# MAGIC
 
 # COMMAND ----------
 
-catalog_name = "ucdqdev"
+spark.sql("USE CATALOG ucdqdev")
 
 # COMMAND ----------
 
 # DBTITLE 1,Read Rules Metadata
 df_rules = ReadTableFromDatabase("dqr.Vw_Rules")
+display(df_rules)
+
+# COMMAND ----------
+
+from pyspark.sql.functions import broadcast
+df_dbcobj = spark.sql("""SELECT * FROM dataquality.dqdbcobjects""")
+
+
+df_rules = df_rules.join(broadcast(df_dbcobj), (df_rules['dqobjectname'] == df_dbcobj['objectname']) & (df_rules['dqdomain'] == df_dbcobj['domain']), how="left").select(df_rules["*"], df_dbcobj["entity"])
+
+# COMMAND ----------
+
+display(df_dbcobj)
+
+# COMMAND ----------
+
 display(df_rules)
 
 # COMMAND ----------
@@ -27,13 +42,16 @@ for row in df_rules.collect():
     query     = row["sqlquery"]
     sourceattribute     = row["dqattribute1"]
     targetattribute     = row["dqattribute2"]
-    
+    domain_name = row['dqdomain']
+    entity = row['entity']
     
     match rulename:
-        case "PrimaryKeyCheck":
-            executePrimaryKeyCheck( object_name,sourcelayer,rulename,sourceattribute,query)
-        case "NullCheck":
-            executeNullCheck( object_name,sourcelayer,rulename,sourceattribute,query)
+        # case "PrimaryKeyCheck":
+        #     executePrimaryKeyCheck(object_name,sourcelayer,rulename,sourceattribute,query)
+        # case "NullCheck":
+        #     executeNullCheck(object_name,sourcelayer,rulename,sourceattribute,query)
+        case "RecordCount":
+            executeRecordCount(domain_name,object_name,entity,sourcelayer,targetlayer,rulename,sourceattribute,targetattribute,query)
         case _:
             print(f"⚠️ Unknown rule type: {rulename}")
 
@@ -68,7 +86,3 @@ display(df_dq_results_final)
 # COMMAND ----------
 
 WriteDataframeToDatabaseMode(df_dq_results_final,"dqr.dqresults","append")
-
-# COMMAND ----------
-
-

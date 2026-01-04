@@ -3,7 +3,7 @@
 
 # COMMAND ----------
 
-# MAGIC %run ../Misc/SharedLibraries
+# MAGIC %run ../01_Misc/01_SharedLibraries
 
 # COMMAND ----------
 
@@ -58,14 +58,4 @@ display(spark.table("silver.dimvertical"))
 
 # COMMAND ----------
 
-# MAGIC %sql
-# MAGIC INSERT INTO bronze.workertable(Vertical)VALUES("Data & AI")
-
-# COMMAND ----------
-
-# MAGIC %sql
-# MAGIC DELETE FROM bronze.workertable WHERE Vertical ="Data & AI"
-
-# COMMAND ----------
-
-
+saveUCsilverTableToDQ('silver','','',Entity)

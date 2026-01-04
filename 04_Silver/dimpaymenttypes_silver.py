@@ -3,7 +3,7 @@
 
 # COMMAND ----------
 
-# MAGIC %run ../Misc/SharedLibraries
+# MAGIC %run ../01_Misc/01_SharedLibraries
 
 # COMMAND ----------
 
@@ -95,7 +95,7 @@ df_final = idsFinal
 
 # COMMAND ----------
 
-appendToDeltaTable(df_final,"silver",Entity)
+saveDeltaTableToCatalog(df_final,"silver",Entity)
 
 # COMMAND ----------
 
@@ -104,4 +104,4 @@ appendToDeltaTable(df_final,"silver",Entity)
 
 # COMMAND ----------
 
-
+saveUCsilverTableToDQ('silver','','',Entity)

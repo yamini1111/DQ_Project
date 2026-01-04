@@ -5,6 +5,10 @@ jdbcurl = server_name + ";" + "databaseName=" + database_name + ";"
 
 # COMMAND ----------
 
+raw_folder = "abfss://operations@sgadlsdqprojectdev.dfs.core.windows.net/DeltaLake/Raw/"
+
+# COMMAND ----------
+
 sqlusername = dbutils.secrets.get("adbdevscope","azsql-username")
 sqlpassword = dbutils.secrets.get("adbdevscope","azsql-password")
 
@@ -18,6 +22,15 @@ def ReadTableFromDatabase(Tablename):
         .option("password",sqlpassword)
         .option("dbtable",Tablename).load()
         )
+    except Exception as e:
+        raise Exception    
+    return df
+
+# COMMAND ----------
+
+def ReadTableFromDeltaLake(DomainName, TableName):
+    try:
+        df = (spark.read.format("delta").load(f"{raw_folder}{DomainName}/{TableName}"))
     except Exception as e:
         raise Exception    
     return df
@@ -67,7 +80,3 @@ def WriteDataframeToDatabaseMode(dfName,Tablename,writemode):
         .mode(writemode)
         .option("dbtable",Tablename).save()
         )
-
-# COMMAND ----------
-
-

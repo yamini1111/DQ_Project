@@ -101,6 +101,32 @@ def saveDeltaTableToCatalog(df,schema,tableName):
 
 # COMMAND ----------
 
+def saveUCsilverTableToDQ(layer, domain, objectname, entity):
+
+    spark.sql(f"""
+        CREATE TABLE IF NOT EXISTS dataquality.dqdbcobjects (
+            layer STRING,
+            domain STRING,
+            objectname STRING,
+            entity STRING,
+            loaddate TIMESTAMP
+        )
+        USING DELTA
+    """)
+
+    result_df = spark.sql(f"""
+        SELECT 1 FROM dataquality.dqdbcobjects
+            WHERE layer = '{layer}' AND domain = '{domain}' AND objectname = '{objectname}' AND entity = '{entity}'
+    """)
+
+    if result_df.isEmpty():
+        spark.sql(f"""
+            INSERT INTO dataquality.dqdbcobjects (layer, domain, objectname, entity, loaddate) 
+            VALUES ('{layer}', '{domain}', '{objectname}', '{entity}', current_timestamp())
+        """)
+
+# COMMAND ----------
+
 # def readEntity(manifestPath,entity):
 #     df = (spark.read.format("com.microsoft.cdm")
 #     .option("storage", "90111adlsdev.dfs.core.windows.net")
